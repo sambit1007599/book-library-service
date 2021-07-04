@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: '@project.artifactId@'
+
+server:
+  port: 7075
+
+constants:
+  library:
+    bookCsvFileName: "books.csv"
+    authorCsvFileName: "authors.csv"
+    magazineCsvFileName: "magazines.csv"
+    csvFileColumnSeparator: ';'
+    csvFilesSkipLine: 1
+    csvFileRepoPath: "org/echocat/kata/java/part1/data/"
+  error:
+    fileNotFoundException:
+      code: FILE_NOT_FOUND
+      message: File not found.
+    genericException:
+      code: INTERNAL_SERVER_ERROR
+      message: Something went wrong while processing the request.
+
+#swagger
+swagger.api:
+  title: 'BOOK LIBRARY SERVICE'
+  description: 'This service enable you to explore library with different books of different authors'
+  version: 1
+  apiType: private
+  defaultResponseMessage: false
+  basePackage: org.echocat.kata.java.part1
+  contact:
+    email: sambit1007599@gmail.com
+    teamName: Sambit Samal
